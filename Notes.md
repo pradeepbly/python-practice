@@ -7,3 +7,7 @@ https://github.com/sbgowtham/30_python_projects/blob/main/cal.py
 
 Python Video
 https://www.youtube.com/watch?v=ix9cRaBkVe0
+
+
+ETL Video
+https://www.youtube.com/watch?v=7xWS_b9XkGU
