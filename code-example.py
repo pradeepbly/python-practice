@@ -215,3 +215,113 @@ class TestBucketName(unittest.TestCase):
         self.assertFalse(is_valid_bucket_name("Invalid_Bucket"))
 
 unittest.main(argv=[''], exit=False)
+
+
+
+'''
+5. String Formatting
+You often need to insert variables into a string. F-strings (formatted string literals) are the modern and most readable way to do this.
+'''
+name = "Alice"
+age = 30
+# The 'f' at the start indicates an f-string
+message = f"Hello, my name is {name} and I am {age} years old."
+print(message) # Output: "Hello, my name is Alice and I am 30 years old."
+
+
+'''
+4. Splitting and Joining Strings
+These operations are crucial for parsing text. The split() method breaks a string into a list of substrings, and the join() method does the opposite
+'''
+my_string = "apple,banana,cherry"
+# Split the string by the comma delimiter
+fruits_list = my_string.split(',')
+print(fruits_list) # Output: ['apple', 'banana', 'cherry']
+
+# Join the list elements back into a string with a space
+new_string = ' '.join(fruits_list)
+print(new_string) # Output: "apple banana cherry"
+
+
+'''
+3. Palindrome Check
+A palindrome is a word or phrase that reads the same forwards and backward. 
+You can check this by comparing the original string with its reversed version.
+'''
+
+word = "madam"
+# Convert the word to lowercase for a case-insensitive check
+word = word.lower()
+
+# Check if the word is equal to its reversed version
+if word == word[::-1]:
+    print(f"'{word}' is a palindrome.")
+else:
+    print(f"'{word}' is not a palindrome.")
+
+'''
+Counting Vowels and Consonants
+This program iterates through a string and checks each character
+'''
+sentence = "Hello World"
+vowels = "aeiouAEIOU"
+vowel_count = 0
+consonant_count = 0
+
+for char in sentence:
+    if char.isalpha(): # Check if the character is an alphabet
+        if char in vowels:
+            vowel_count += 1
+        else:
+            consonant_count += 1
+
+print("Vowels:", vowel_count)      # Output: Vowels: 3
+print("Consonants:", consonant_count) # Output: Consonants: 7
+
+
+'''
+2. Common String Programs and Logic
+Reversing a String
+This is a classic problem. The simplest way is using string slicing.
+'''
+my_string = "Python"
+reversed_string = my_string[::-1]
+print(reversed_string) # Output: "nohtyP"
+
+
+
+'''
+1. Basic OperationsCreating a String:
+'''
+my_string = "Hello, Python!"
+
+'''
+Accessing Characters:
+Strings are like arrays of characters, so you can access them by index.
+'''
+    
+first_char = my_string[0]  # Output: 'H'
+last_char = my_string[-1]   # Output: '!'
+Slicing a String:
+You can extract a substring using slicing [start:end:step].
+
+# Get a substring from index 0 to 4 (exclusive)
+substring1 = my_string[0:5] # Output: "Hello"
+
+# Get a substring from index 7 to the end
+substring2 = my_string[7:]  # Output: "Python!"
+
+# Reverse the string
+reversed_string = my_string[::-1] # Output: "!nohtyP ,olleH"
+
+
+'''2. Common String Programs and Logic
+Reversing a String
+This is a classic problem. The simplest way is using string slicing.
+
+Python
+'''
+my_string = "Python"
+reversed_string = my_string[::-1]
+print(reversed_string) # Output: "nohtyP"
+Alternatively, you can use a loop or the reversed() function combined with ''.join().
