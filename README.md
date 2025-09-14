@@ -13,7 +13,7 @@ Data Abstraction
 
 https://www.wscubetech.com/resources/python/oops-concepts
 
-Lead Software Engineer (AWS Cloud, Platform Engineering) role is AWS + Platform + DevOps heavy, the Python coding exercises will most likely test:
+#Lead Software Engineer (AWS Cloud, Platform Engineering) role is AWS + Platform + DevOps heavy, the Python coding exercises will most likely test:
 
 Basic Python knowledge (OOPs, data structures, error handling).
 Automation scripting (AWS SDK – boto3).
@@ -22,14 +22,14 @@ Debugging / optimizing existing code.
 
 They won’t ask hardcore DSA like FAANG, but expect practical coding that shows you can automate AWS tasks and write clean code.
 
-🔹 Python Programs You Might Be Asked in Interview
-1. String & List Basics
+#🔹 Python Programs You Might Be Asked in Interview
+#1. String & List Basics
 Reverse a string without using slicing ([::-1]).
 Count occurrences of each word in a sentence.
 Remove duplicates from a list while preserving order.
 Find the second largest number in a list.
 
-2. File Handling & JSON
+#2. File Handling & JSON
 Read a JSON file of AWS resources and print all S3 bucket names.
 Parse a CSV of user data and filter only users from a given region.
 Log output to a file with timestamps (basic logging).
