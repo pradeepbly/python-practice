@@ -11,3 +11,7 @@ https://www.youtube.com/watch?v=ix9cRaBkVe0
 
 ETL Video
 https://www.youtube.com/watch?v=7xWS_b9XkGU
+
+
+Data Pipeline
+https://www.youtube.com/watch?v=-9aS0LMvF4w
