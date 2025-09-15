@@ -1,7 +1,7 @@
-AWS Data Pipeline Architecture
+## AWS Data Pipeline Architecture
 This document outlines a modern data pipeline architecture using the requested AWS services to ingest, store, process, and analyze data. The core of this architecture is a data lake on Amazon S3, with specialized services for each stage of the data lifecycle.
 
-High-Level Overview
+## High-Level Overview
 The proposed pipeline follows a standard extract, load, and transform (ELT) pattern.
 
 Ingestion: Data is continuously ingested via Amazon MSK (Managed Streaming for Kafka).
@@ -14,8 +14,8 @@ Processing: Data transformation and enrichment are performed using Apache Spark 
 
 Analysis: Final processed data is queried for business intelligence and analytics using Amazon Athena.
 
-Detailed Breakdown by Service
-1. Ingestion with Amazon MSK
+## Detailed Breakdown by Service
+## 1. Ingestion with Amazon MSK
 Purpose: To capture real-time, streaming data from various sources (e.g., application logs, IoT devices, clickstreams).
 
 Process:
@@ -26,7 +26,7 @@ Kafka Connect, a component of MSK, or a custom consumer application can read fro
 
 The consumer application then writes the raw data directly to the S3 data lake in a raw zone (e.g., s3://your-data-lake/raw/).
 
-2. Storage on Amazon S3
+## 2. Storage on Amazon S3
 Purpose: To serve as a highly available, durable, and scalable data lake.
 
 Process:
@@ -39,7 +39,7 @@ Staging Zone: Holds cleansed and formatted data (e.g., Parquet, ORC).
 
 Curated Zone: Stores processed, business-ready data optimized for analysis.
 
-3. Cataloging and Governance with AWS Glue & Lake Formation
+## 3. Cataloging and Governance with AWS Glue & Lake Formation
 Purpose: To make data discoverable, queryable, and secure.
 
 Process:
@@ -48,7 +48,7 @@ AWS Glue Data Catalog: AWS Glue Crawlers automatically scan the data in your S3 
 
 AWS Lake Formation: This service sits on top of the Glue Data Catalog. It provides a simple, centralized way to manage permissions for S3 data. Instead of managing IAM policies for every user, you grant permissions (e.g., SELECT, ALTER, DROP) to data lake users or groups directly on the Glue tables.
 
-4. Processing with Amazon EMR
+## 4. Processing with Amazon EMR
 Purpose: To transform, cleanse, and enrich the raw data using Apache Spark's powerful distributed processing capabilities.
 
 Process:
@@ -67,7 +67,7 @@ Aggregating metrics.
 
 The processed data is then written back to S3, but in a different, more structured format (e.g., Parquet) and into a different zone (e.g., s3://your-data-lake/curated/).
 
-5. Analysis with Amazon Athena
+## 5. Analysis with Amazon Athena
 Purpose: To enable business users and data analysts to run ad-hoc queries on the data lake without setting up a server.
 
 Process:
