@@ -34,7 +34,7 @@ Read a JSON file of AWS resources and print all S3 bucket names.
 Parse a CSV of user data and filter only users from a given region.
 Log output to a file with timestamps (basic logging).
 
-4. OOPs Concepts (since JD mentions OOPs)
+4. OOPs Concepts
 Write a CloudResource base class and extend it for EC2Instance and S3Bucket.
 Implement encapsulation (private attributes for resource IDs).
 Show polymorphism (same method create() but different behavior for EC2 vs S3).
